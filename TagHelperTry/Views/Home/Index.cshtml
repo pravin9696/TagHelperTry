@@ -1,0 +1,18 @@
+﻿@model Languages
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<div>
+    <a asp-controller="Home" asp-action="Privacy"> Go to Privacy page</a>
+</div>
+<form asp-action="Index" asp-controller="Home" method="post">
+
+    <select asp-for=ID asp-items=@ViewBag.Languages></select><br>
+    <input type="text" asp-for=Lang/>
+    <input type="submit" value="Submit" />
+</form>

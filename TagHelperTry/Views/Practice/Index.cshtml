@@ -1,0 +1,19 @@
+﻿@model Languages
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+@* @using (Html.BeginForm())
+{
+    <select asp-for=ID asp-items=@ViewBag.langs></select>
+    <input type="submit" value="submit" />
+} *@
+<form asp-action="Index" asp-controller="Practice" method="post" role="form">
+  <label asp-for=Lang></label>  <select asp-for=ID   asp-items=@ViewBag.langs></select>
+  <br/>
+  <input asp-for=Lang type="text" />
+    <input type="submit" value="submit" />
+</form>
+
+<a asp-action="Privacy" asp-controller="Home">Goto Privacy page</a>

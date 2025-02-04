@@ -1,0 +1,11 @@
+﻿@model Languages
+@{
+    ViewData["Title"] = "ShowLangs";
+}
+
+<h1>ShowLangs</h1>
+@using (Html.BeginForm())
+{
+    <select asp-for=ID asp-items=@ViewBag.langs></select>
+    <input type="submit" value="submit" />
+}
