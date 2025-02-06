@@ -6,6 +6,10 @@ namespace TagHelperTry.Controllers
 {
     public class PracticeController : Controller
     {
+        public string details(int id,string name)
+        {
+            return " ID is :" + id+" Name:"+name;
+        }
         public IActionResult Index()
         {
              List<SelectListItem> langs=new List<SelectListItem>() { 
@@ -39,5 +43,10 @@ namespace TagHelperTry.Controllers
         {
             return View();
         }
+        
+        public IActionResult empReg()
+        {
+            return View();
         }
+    }
 }

@@ -1,0 +1,40 @@
+﻿@model Employee3
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Employee Registration</h1>
+<form asp-action="Index" asp-controller="MyEmployee" method="post">
+    <label asp-for="Id" >Employee ID</label>
+    
+    <span asp-validation-for="Id" style="color:red"></span><br />
+    <input type="number"  asp-for="Id"/><br />
+    <label asp-for="Name">Employee Name</label>
+    <span asp-validation-for="Name" style="color:red"></span><br />
+    <br/>
+    <input type="text" asp-for="Name"/>
+    <br />
+    <label asp-for="Department">Select Department</label>
+    <span asp-validation-for="Department" style="color:red"></span><br />
+    <br />
+    <select asp-for="Department" asp-items="@ViewBag.deptList">    
+        <option>Select Department</option>
+    </select>
+    <br />
+    <label asp-for="Gender">Gender</label>
+    <span asp-validation-for="Gender" style="color:red"></span><br />
+    <br />
+    <input type="radio" asp-for="Gender" value="Male" />Male
+    <input type="radio" asp-for="Gender" value="FeMale" />Female
+    <br />
+    <label asp-for="Address">Address</label>
+    <span asp-validation-for="Address" style="color:red"></span><br />
+    <br />
+    <textarea asp-for="Address" rows="4">
+
+    </textarea>
+    <br />
+    <input type="submit" value="Submit" />
+    
+</form>
+

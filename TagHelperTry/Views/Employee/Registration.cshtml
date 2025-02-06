@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewData["Title"] = "Registration";
+}
+
+<h1>Employee Registration</h1>
+<form asp-action="Registration" asp-controller="Employee" method="post">
+   <label asp-for="Name">Employee Name:</label>
+   <br />
+   <input type="text" asp-for="Name" placeholder="Employee Name" />
+   <br />
+   <label asp-for="Gender">Gender:</label>
+   <br />
+   <select asp-for="Gender" asp-items="Html.GetEnumSelectList<EnumGender>()">
+       <option>Select Gender</option>
+   </select>
+   <br />
+   <label asp-for="Age">Age:</label>
+   <br />
+   <input type="text" asp-for="Age" placeholder="type Age of Employee" />
+   <br />
+    <label asp-for="Designation">Designation:</label>
+    <br />
+    <input type="text" asp-for="Designation" asp- placeholder="Designation" />
+    <br />
+    <label asp-for="Salary">Salary:</label>
+    <br />
+    <input type="number" asp-for="Salary" placeholder="type Age of Employee" />
+    <br />
+    <label asp-for="Married">Married:</label>
+    <br />
+    <input type="radio" asp-for="Married" value="Yes"/>
+    Yes
+    <br />
+    <input type="radio" asp-for="Married" value="No"/>No
+    <br />
+    <label asp-for="Description">Description:</label>
+    <br />
+    <textarea asp-for="Description" placeholder="Description" rows="5">
+
+    </textarea>
+    <br />
+   <input type="submit" value="Submit" />
+</form>
+
